@@ -1,0 +1,52 @@
+/****Footer section****/
+
+.contact{
+  background-color: $color-complementary;
+  color: $color-primary;
+  padding: 2rem;
+
+  & h4{
+    font-size: 1.2rem;
+    font-family: $font-title;
+    text-align: center;
+  }
+
+  &_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 0.85rem;
+
+    // .contact_container
+    @media all and (max-width: 600px) {    
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        justify-content: center;
+    }
+  }
+
+  &_item{
+    width: 20%;
+
+    // .contact_container_item
+    @media all and (max-width: 600px) {    
+        width: 100%;
+    }
+
+    &_img{
+      width: 2rem;
+      vertical-align: middle;
+      line-height: 2;
+      padding-right: 0.75rem;
+    }
+    
+  }
+}
+
+.footer{
+  @media all and (max-width: 600px) {    
+      width: 100%;
+      text-align: center;
+  }
+}

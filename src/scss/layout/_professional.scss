@@ -1,0 +1,32 @@
+/****Professional sections style****/
+
+.professional{
+    height: auto;
+    width: 100%;
+    padding: 2rem 0;
+    font-family: $font-title;
+    background-color: $color-primary;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+
+    & h4{
+        text-align: center;
+        padding-top: 1rem;
+        color: $color-bg
+    }
+
+    &_experience{
+        margin: 0 25%;
+        padding-bottom: 2rem;
+        border-top: 3px solid #bbb;
+        line-height: 2rem;
+        text-align: justify;
+
+        // .professional_experience
+        @media all and (max-width: 600px) {    
+            margin: 0 5%;
+            text-align:start;
+        }
+    }
+}

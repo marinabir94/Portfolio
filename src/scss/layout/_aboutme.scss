@@ -1,0 +1,30 @@
+/****About Me section style****/
+
+.aboutme{
+    padding: 5rem 0;
+    font-family: $font-main;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+    // .aboutme
+    @media all and (max-width: 600px) {    
+        padding: 1rem 0;
+    }
+
+    &_text{
+        width: 50%;
+        line-height: 2.12rem;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+
+        // .aboutme_text
+        @media all and (max-width: 600px) {
+            width: 80%;
+        }
+    }
+}

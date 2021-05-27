@@ -1,0 +1,160 @@
+/***Hero section***/
+
+.hero {
+  height: 600px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-left: 100px;
+  font-family: 'Open Sans', sans-serif;
+  color: #000;
+  background: linear-gradient( rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65) ), url('./img/tech.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-items: center;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr); 
+
+    &_title{
+      grid-row-start: 1;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      padding-top: 4rem;
+      padding-bottom: 0.5rem;
+      color: white;
+      font-size: 48pt;
+      font-weight: 900;
+      font-family: $font-title;
+      text-align: left;
+      margin-left: 4.8rem;
+      max-width: 100%;
+      background-image: linear-gradient(120deg, $color-complementary 0%, $color-primary 100%);
+      background-repeat: no-repeat;
+      background-size: 100% 0.2em;
+      background-position: 0 100%;
+      transition: background-size 0.25s ease-in;
+      position: relative;
+      animation: moving-h1 2s ease 1;
+      overflow-wrap: break-word;
+
+      // .hero_title
+      @media all and (max-width: 600px) {
+        margin-left: 1rem;
+      }
+    }
+
+    &_topnav{
+      width: 100%;
+      font-size: 14pt;
+      position: relative;
+      grid-row-start: 2;
+      grid-column-start: 3;
+      animation: moving-nav 2s ease 1;
+    
+    }
+
+    &_dropdown_button{
+      width: 100%;
+      height: 2rem;
+      font-family: $font-main;
+      font-weight: 900;
+      font-size: 1rem;
+      background-color: $color-complementary;
+      color: $color-primary;
+      border: none;
+      cursor: pointer;
+    }
+
+    &_hidden_menu{
+      margin:0;
+      padding: 1rem 0;
+      width: 100%;
+      background-color: rgba(33, 64, 97, 0.5);
+      transition: 1s ease;
+      transform-origin: top;
+      transform: perspective(1000px) rotateX(-90deg);
+
+      // .hero_hidden_menu
+      @media all and (max-width: 600px) {
+        transform-origin: top;
+        transform: perspective(1000px) rotateX(0deg);
+      }
+
+      &_item{
+        list-style-type: none;
+        padding: 0.5rem 0;
+
+        & a{
+          margin: 2rem;
+          text-decoration: none;
+          color: white; 
+          font-family: $font-main;
+          font-weight: 900;
+          font-size: 1.3rem;
+          line-height: 0.5rem;
+          transition: all 500ms ease;
+  
+          &:hover{
+            color: $color-complementary;
+            font-size: 1.4rem;
+          }
+        }
+      }      
+    }
+
+    &_active_menu{
+      transform-origin: top;
+      transform: perspective(1000px) rotateX(0deg);
+    }
+
+    &_profilepic{
+
+      grid-row-start: 2;
+      grid-column-start: 1;
+      justify-self: center;
+      align-self: center;
+      z-index: 10;
+
+      &_img{
+        height: 15rem;
+        position: relative;
+        animation: grow-img 2s ease 1;
+
+        // .hero_profilepic_img
+        @media all and (max-width: 600px) {
+          margin: 1rem auto;
+          margin-bottom: 1rem;
+        }
+      }
+
+
+    }
+    
+    // .hero
+    @media all and (max-width: 600px) {
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
+}
+
+/***Hero section animations***/
+
+@keyframes moving-h1 {
+  from {left: 100%;}
+  to {left: 0px;}
+}
+
+@keyframes moving-nav {
+  from {right: 100%;}
+  to {right: 0px;}
+}
+
+@keyframes grow-img {
+  from {height: 1rem;}
+  to {height: 15rem;}
+}

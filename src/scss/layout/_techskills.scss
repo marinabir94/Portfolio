@@ -1,0 +1,46 @@
+.techknow{
+    height: auto;
+    width: 100%;
+    padding: 2rem 0;
+    font-family: $font-main;
+    background-color: $color-primary;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+
+    &_graph_desktop{
+        width: 50%;
+        padding: 3rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        // .techknow_graph_desktop
+        @media all and (max-width: 600px) {    
+            display: none;
+        }
+
+        &_img{
+            display: block;
+            width: 100%;
+            height: auto;
+        } 
+    }
+
+    &_graph_mobile{
+        display: none;
+
+        // .techknow_graph_mobile
+        @media all and (max-width: 600px) {    
+            display: block;
+        }
+
+        &_img{
+
+            // .techknow_graph_mobile_img
+            @media all and (max-width: 600px) {    
+                max-width: 90%;
+                padding: 3rem 5%;
+            }
+        }
+    }
+}
