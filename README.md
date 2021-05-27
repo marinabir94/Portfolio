@@ -4,9 +4,9 @@ In this personal space, you can learn a little more about me and you will find a
 
 ## Project features
 
-\*Developed with JavaScript, HMTL5 and CSS3 and SASS.
+\* Developed with JavaScript, HMTL5 and CSS3 and SASS.
 
-\*Mobile first layout strategy.
+\* Mobile first layout strategy.
 
 ## Steps to use the project
 
