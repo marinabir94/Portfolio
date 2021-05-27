@@ -7,9 +7,9 @@
   
     &_title {
       padding: 40px 20px 40px;
-      color: $color-secondary;
+      color: $color-complementary;
       font-size: 50px;
-      font-family: $main-font;
+      font-family: $font-main;
       text-shadow: 2px 2px 0px $color-primary;
       @media all and (min-width: 768px) {
         padding: 80px 20px 80px;
@@ -64,12 +64,12 @@
           padding-bottom: 10px;
           color: $color-primary;
           text-align: left;
-          font-family: $main-font;
+          font-family: $font-main;
         }
         &--description {
           text-align: left;
           font-size: 20px;
-          font-family: $main-font;
+          font-family: $font-main;
         }
         &--list {
           display: flex;
@@ -82,7 +82,7 @@
             background-color: $color-extra;
             color: white;
             border-radius: 3px;
-            font-family: $main-font;
+            font-family: $font-main;
           }
         }
         &--links {
@@ -94,12 +94,11 @@
             background-color: $color-tertiary;
             color: $color-primary;
             border-radius: 6px;
-            font-family: $links-font;
             text-decoration: none;
             font-size: 20px;
             &:hover {
-              background-color: $color-secondary;
-              color: $color-basic;
+              background-color: $color-complementary;
+              color: $color-bg;
               transition: 1s ease;
             }
           }
@@ -117,11 +116,11 @@
     height: 60%;
     width: 65%;
     padding: 10px;
-    background: $color-secondary;
+    background: $color-complementary;
     color: black;
     opacity: 0.9;
     border-radius: 8px;
-    font-family: $main-font;
+    font-family: $font-main;
     font-size: 9px;
     font-weight: 700;
     line-height: 1.5;
